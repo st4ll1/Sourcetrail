@@ -38,7 +38,7 @@ bool QtGraphNodeQualifier::isQualifierNode() const
 
 bool QtGraphNodeQualifier::setPosition(const Vec2i& pos)
 {
-	int width = QFontMetrics(m_name->font()).width(m_name->text()) + 10;
+	int width = QFontMetrics(m_name->font()).horizontalAdvance(m_name->text()) + 10;
 	int height = QFontMetrics(m_name->font()).height() + 2;
 	int arrowWidth = height * 0.85;
 
@@ -109,7 +109,7 @@ void QtGraphNodeQualifier::updateStyle()
 
 void QtGraphNodeQualifier::hoverEnterEvent(QGraphicsSceneHoverEvent* event)
 {
-	int width = QFontMetrics(m_name->font()).width(m_name->text()) + 10;
+	int width = QFontMetrics(m_name->font()).horizontalAdvance(m_name->text()) + 10;
 	int height = QFontMetrics(m_name->font()).height() + 2;
 	int arrowWidth = height * 0.85;
 	float smallFactor = 0.5f;

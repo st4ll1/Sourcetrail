@@ -94,7 +94,7 @@ QtCodeField::QtCodeField(
 	QFont font(appSettings->getFontName().c_str());
 	font.setPixelSize(appSettings->getFontSize());
 	setFont(font);
-	setTabStopWidth(appSettings->getCodeTabWidth() * fontMetrics().width('9'));
+	setTabStopDistance(appSettings->getCodeTabWidth() * fontMetrics().horizontalAdvance('9'));
 
 	m_openInTabAction = new QAction("Open in New Tab", this);
 	m_openInTabAction->setStatusTip("Opens the node in a new tab");
@@ -123,7 +123,7 @@ QSize QtCodeField::sizeHint() const
 							   1000000,
 							   Qt::AlignLeft | Qt::AlignTop | Qt::TextExpandTabs,
 							   block.text(),
-							   tabStopWidth())
+							   tabStopDistance())
 							 .width();
 
 		width = std::max(blockWidth, width);

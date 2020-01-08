@@ -50,7 +50,7 @@ void QtTextEditDialog::populateWindow(QWidget* widget)
 	m_text = new QPlainTextEdit();
 	m_text->setObjectName("textField");
 	m_text->setLineWrapMode(QPlainTextEdit::NoWrap);
-	m_text->setTabStopWidth(8 * m_text->fontMetrics().width('9'));
+	m_text->setTabStopDistance(8 * m_text->fontMetrics().horizontalAdvance('9'));
 	layout->addWidget(m_text);
 
 	widget->setLayout(layout);

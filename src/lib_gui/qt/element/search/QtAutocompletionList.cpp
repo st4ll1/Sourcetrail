@@ -317,7 +317,7 @@ void QtAutocompletionDelegate::calculateCharSizes(QFont font)
 	m_font1 = font;
 
 	QFontMetrics metrics1(font);
-	m_charWidth1 = metrics1.width(
+	m_charWidth1 = metrics1.horizontalAdvance(
 					   "---------------------------------------------------------------------------"
 					   "-------------------------"
 					   "---------------------------------------------------------------------------"
@@ -335,7 +335,7 @@ void QtAutocompletionDelegate::calculateCharSizes(QFont font)
 	m_font2 = font;
 
 	QFontMetrics metrics2(font);
-	m_charWidth2 = metrics2.width(
+	m_charWidth2 = metrics2.horizontalAdvance(
 					   "---------------------------------------------------------------------------"
 					   "-------------------------"
 					   "---------------------------------------------------------------------------"

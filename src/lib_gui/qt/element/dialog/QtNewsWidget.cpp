@@ -22,7 +22,7 @@ QtNewsWidget::QtNewsWidget(QWidget* parent): QWidget(parent)
 	m_text = new QtTextEdit();
 	m_text->setObjectName("textField");
 	m_text->setReadOnly(true);
-	m_text->setTabStopWidth(8 * m_text->fontMetrics().width('9'));
+	m_text->setTabStopDistance(8 * m_text->fontMetrics().horizontalAdvance('9'));
 	m_text->setViewportMargins(6, 4, 16, 4);
 	m_text->setOpenExternalLinks(true);
 	layout->addWidget(m_text);

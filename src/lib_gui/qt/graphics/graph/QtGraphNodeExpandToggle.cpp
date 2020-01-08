@@ -69,7 +69,7 @@ void QtGraphNodeExpandToggle::updateStyle()
 	setStyle(style);
 
 	float textX = (m_rect->rect().width() / 2) -
-		(QFontMetrics(m_text->font()).width(m_text->text()) / 2);
+		(QFontMetrics(m_text->font()).horizontalAdvance(m_text->text()) / 2);
 	float textY = m_rect->rect().height() / 2 - QFontMetrics(m_text->font()).height() / 1.8f;
 
 	// move the text to the nearest integer x pos, instead of the next lower int pos

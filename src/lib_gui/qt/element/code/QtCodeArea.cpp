@@ -281,7 +281,7 @@ int QtCodeArea::lineNumberAreaWidth() const
 {
 	if (m_showLineNumbers)
 	{
-		return fontMetrics().width(QLatin1Char('9')) * m_digits + 30;
+		return fontMetrics().horizontalAdvance(QLatin1Char('9')) * m_digits + 30;
 	}
 
 	return 0;

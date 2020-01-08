@@ -197,7 +197,7 @@ void QtCodeNavigator::updateReferenceCount(
 	}
 
 	m_refLabel->setMinimumWidth(
-		m_refLabel->fontMetrics().width(
+		m_refLabel->fontMetrics().horizontalAdvance(
 			QString(QString::number(referenceCount).size() * 2, 'a') + "/ references") +
 		30);
 
@@ -217,7 +217,7 @@ void QtCodeNavigator::updateReferenceCount(
 	}
 
 	m_localRefLabel->setMinimumWidth(
-		m_localRefLabel->fontMetrics().width(
+		m_localRefLabel->fontMetrics().horizontalAdvance(
 			QString(QString::number(localReferenceCount).size() * 2, 'a') + "/ local references") +
 		30);
 

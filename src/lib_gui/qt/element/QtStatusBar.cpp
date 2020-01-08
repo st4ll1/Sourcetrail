@@ -130,8 +130,8 @@ void QtStatusBar::setErrorCount(ErrorCountInfo errorCount)
 			QString::number(errorCount.total) + " error" + (errorCount.total > 1 ? "s" : "") +
 			(errorCount.fatal > 0 ? " (" + QString::number(errorCount.fatal) + " fatal)" : ""));
 
-		m_errorButton.setMinimumWidth(
-			m_errorButton.fontMetrics().width(QString(m_errorButton.text().size(), 'a')));
+		m_errorButton.setMinimumWidth(m_errorButton.fontMetrics().horizontalAdvance(
+			QString(m_errorButton.text().size(), 'a')));
 
 		if (errorCount.fatal > 0)
 		{
